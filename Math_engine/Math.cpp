@@ -16,3 +16,21 @@ int Math::Cmmmc(int a, int b)
 {
 	return a * b / Cmmdc(a, b);
 }
+double Math::Arithmetic_mean(double numbers[], int n)
+{
+	int mean = 0;
+	for (int i = 0; i < n; i++)
+	{
+		mean = mean + numbers[i];
+	}
+	return mean / n;
+}
+double Math::Geometric_mean(double numbers[], int n)
+{
+	int mean = 1;
+	for (int i = 0; i < n; i++)
+	{
+		mean = mean * numbers[i];
+	}
+	return pow(mean, 1/n);
+}

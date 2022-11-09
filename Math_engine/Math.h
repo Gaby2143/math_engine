@@ -1,5 +1,5 @@
 #pragma once
-
+#include <math.h>;
 
 class Math
 {
@@ -37,12 +37,12 @@ class Math
 	/// Return the average mean of n numbers given in the array "double *numbers"
 	/// Complexity: O(n)
 	/// </summary>
-	public: static double Arithmetic_mean(double* numbers, int n);
+	public: static double Arithmetic_mean(double numbers[], int n);
 	/// <summary>
 	/// Return the geometric mean of n numbers given in the array "double *numbers"
 	/// Complexity: O(n)
 	/// </summary>
-	public: static double Geometric_mean(double* numbers, int n);
+	public: static double Geometric_mean(double numbers[], int n);
 	/// <summary>
 	/// Return the weighted mean of n numbers given in the array "double *numbers" with the wheights given in the array "double *weights"
 	/// Complexity: O(n)
