@@ -4,5 +4,6 @@
 
 int main()
 {
-    std::cout<<Math::Is_even(32);
+    double a[] = { 4,1 };
+    std::cout << Math::Geometric_mean(a, 2);
 }

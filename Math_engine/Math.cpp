@@ -32,5 +32,5 @@ double Math::Geometric_mean(double numbers[], int n)
 	{
 		mean = mean * numbers[i];
 	}
-	return pow(mean, 1/n);
+	return pow(mean, 1/(double)n);
 }
