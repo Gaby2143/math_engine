@@ -4,6 +4,5 @@
 
 int main()
 {
-    double a[] = { 4,1 };
-    std::cout << Math::Geometric_mean(a, 2);
+    std::cout << Math::Round_down(-3.4);
 }

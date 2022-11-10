@@ -49,7 +49,7 @@ class Math
 	/// </summary>
 	public: static double Weighted_mean(double* numbers, double* weights, int n);
 	/// <summary>
-	/// Return a random number betwen start and stop numbers FOR EVERY RUN
+	/// Return a random number between start and stop numbers FOR EVERY RUN
 	/// Complexity: O(1)
 	/// </summary>
 	public: static int Random(int start, int end);

@@ -34,3 +34,19 @@ double Math::Geometric_mean(double numbers[], int n)
 	}
 	return pow(mean, 1/(double)n);
 }
+int Math::Round_up(double number)
+{
+	if (number < 0)
+	{
+		return (int)number;
+	}
+	return (int)number + 1;
+}
+int Math::Round_down(double number)
+{
+	if (number < 0)
+	{
+		return (int)number - 1;
+	}
+	return (int)number;
+}
