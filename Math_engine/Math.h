@@ -53,6 +53,15 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static int Random(int start, int end);
+	/// <summary>
+	/// Add the first elements in the list start,start+ratio,start+list*2+....+start+list*(n-1)
+	/// Complexity: O(1)
+	/// </summary>
+	public: static int Gauss(int start,int ratio,int elements);
+	/// <summary>
+	/// Check if a is equal to b with an error of eps 
+	/// </summary>
+	public: static bool Equal(double a, double b, double eps = 0.00001);
 };
 
 
