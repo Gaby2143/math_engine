@@ -4,5 +4,5 @@
 
 int main()
 {
-    std::cout << Math::Round_down(-3.4);
+    std::cout << Math::Gauss(2, 2, 10);
 }

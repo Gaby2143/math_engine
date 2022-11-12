@@ -3,7 +3,7 @@ bool Math::Is_even(long long int number)
 {
 	return number % 2 == 0 ? true : false;
 }
-int Math::Cmmdc(int a, int b)
+int Math::GCD(int a, int b)
 {
 	while (a!=b)
 	{
@@ -12,9 +12,9 @@ int Math::Cmmdc(int a, int b)
 	}
 	return a;
 }
-int Math::Cmmmc(int a, int b)
+int Math::LCM(int a, int b)
 {
-	return a * b / Cmmdc(a, b);
+	return a * b / GCD(a, b);
 }
 double Math::Arithmetic_mean(double numbers[], int n)
 {
@@ -49,4 +49,36 @@ int Math::Round_down(double number)
 		return (int)number - 1;
 	}
 	return (int)number;
+}
+bool Math::Is_prime(long long int number)
+{
+	if (number <= 0) return false;
+	if (number == 2) return true;
+	for (int i = 2; i < number / 2; i++)
+	{
+		if (number % i == 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+double Math::Abs(double number)
+{
+	return number < 0 ? -number : number;
+}
+int Math::Round(double number)
+{
+	if (Abs(number - (int)number) < 0.5)
+	{
+		return Round_down(number);
+	}
+	if (Abs(number - (int)number) >= 0.5)
+	{
+		return Round_up(number);
+	}
+}
+int Math::Gauss(int start, int stop, int ratio)
+{
+	return ((start + stop) * (((stop - start) / ratio) + 1)) / 2;
 }
