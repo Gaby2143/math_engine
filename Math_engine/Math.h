@@ -65,8 +65,24 @@ class Math
 	public: static int Gauss(int start, int stop, int ratio);
 	/// <summary>
 	/// Check if a is equal to b with an error of eps 
+	/// Complexity: O(1)
 	/// </summary>
 	public: static bool Equal(double a, double b, double eps = 0.00001);
+	/// <summary>
+	/// Calculate the factorial of an int
+	/// Complexity: O(n)
+	/// </summary>
+	public: static int Factorial(int a);
+	/// <summary>
+	/// Calculate combinations
+	/// Complexity: O(n)
+	/// </summary>
+	public: static int Combinations(int n, int r);
+	/// <summary>
+	/// Calculate arangements
+	/// Complexity: O(n)
+	/// </summary>
+	public: static int Arangements(int n, int r);
 };
 
 

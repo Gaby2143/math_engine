@@ -82,3 +82,21 @@ int Math::Gauss(int start, int stop, int ratio)
 {
 	return ((start + stop) * (((stop - start) / ratio) + 1)) / 2;
 }
+int Math::Factorial(int a)
+{
+	int res = 1;
+	while (a > 0)
+	{
+		res = res * a;
+		a--;
+	}
+	return res;
+}
+int Math::Combinations(int n, int r)
+{
+	return Factorial(n) / (Factorial(r) * Factorial(n - r));
+}
+int Math::Arangements(int n, int r)
+{
+	return Factorial(n) / Factorial(n - r);
+}
