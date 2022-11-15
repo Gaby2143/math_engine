@@ -100,3 +100,11 @@ int Math::Arangements(int n, int r)
 {
 	return Factorial(n) / Factorial(n - r);
 }
+double Math::Delta(double a, double b, double c)
+{
+	return (b * b) - 4*a*c;
+}
+double Math::Circle_area(double r)
+{
+	return PI * (r * r);
+}

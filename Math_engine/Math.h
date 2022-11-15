@@ -1,5 +1,6 @@
 #pragma once
-#include <math.h>;
+#include <math.h>
+#define PI (double)3.14159265358979323846
 
 class Math
 {
@@ -83,8 +84,14 @@ class Math
 	/// Complexity: O(n)
 	/// </summary>
 	public: static int Arangements(int n, int r);
+	/// <summary>
+	/// Calculate Delta with given a, b, c
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Delta(double a, double b, double c);
+	/// <summary>
+	/// Calculate the area of a circle
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Circle_area(double r);
 };
-
-
-
-
