@@ -108,3 +108,11 @@ double Math::Circle_area(double r)
 {
 	return PI * (r * r);
 }
+double Math::Rectangle_area(double length, double width)
+{
+	return length * width;
+}
+double Math::Square_area(double side)
+{
+	return side * side;
+}

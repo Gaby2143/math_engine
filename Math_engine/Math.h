@@ -94,4 +94,14 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Circle_area(double r);
+	/// <summary>
+	/// Calculate the area of a rectangle with given length and width
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Rectangle_area(double length, double width);
+	/// <summary>
+	/// Calculate the area of a square with given side
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Square_area(double side);
 };
