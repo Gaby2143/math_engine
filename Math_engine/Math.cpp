@@ -110,9 +110,9 @@ double Math::Circle_area(double r)
 }
 double Math::Rectangle_area(double length, double width)
 {
-	return length * width;
+	if(length > 0 && width > 0) return length * width;
 }
 double Math::Square_area(double side)
 {
-	return side * side;
+	if(side > 0) return side * side;
 }
