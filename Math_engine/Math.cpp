@@ -106,13 +106,36 @@ double Math::Delta(double a, double b, double c)
 }
 double Math::Circle_area(double r)
 {
-	return PI * (r * r);
+	if (r > 0) return PI * (r * r);
+	else return -1;
 }
 double Math::Rectangle_area(double length, double width)
 {
 	if(length > 0 && width > 0) return length * width;
+	else return -1;
 }
 double Math::Square_area(double side)
 {
 	if(side > 0) return side * side;
+	else return -1;
+}
+double Math::Square_perimiter(double side)
+{
+	if (side > 0) return side * 4;
+	else return -1;
+}
+double Math::Triangle_perimiter(double a, double b, double c)
+{
+	if (a > 0 && b > 0 && c > 0) return a + b + c;
+	else return -1;
+}
+double Math::Rectangle_perimiter(double length, double width)
+{
+	if (length > 0 && width > 0) return (2 * length) + (2 * width);
+	else return -1;
+}
+double Math::Circle_length(double r)
+{
+	if (r > 0) return 2 * PI * r;
+	else return -1;
 }

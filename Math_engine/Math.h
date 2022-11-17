@@ -90,7 +90,7 @@ class Math
 	/// </summary>
 	public: static double Delta(double a, double b, double c);
 	/// <summary>
-	/// Calculate the area of a circle
+	/// Calculate the area of a circle with given radius
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Circle_area(double r);
@@ -104,4 +104,24 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Square_area(double side);
+	/// <summary>
+	/// Calculate the perimiter of a square with given side
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Square_perimiter(double side);
+	/// <summary>
+	/// Calculate the perimiter of a triangle with given sides
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Triangle_perimiter(double a, double b, double c);
+	/// <summary>
+	/// Calculate the perimiter of a rectangle with given length and width
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Rectangle_perimiter(double length, double width);
+	/// <summary>
+	/// Calculate the length of a circle with given radius
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Circle_length(double r);
 };
