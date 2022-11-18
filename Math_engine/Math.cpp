@@ -139,3 +139,13 @@ double Math::Circle_length(double r)
 	if (r > 0) return 2 * PI * r;
 	else return -1;
 }
+double Math::Cube_area(double side)
+{
+	if (side > 0) return Square_area(side) * 6;
+	else return -1;
+}
+double Math::Cuboid_area(double length, double width, double height)
+{
+	if (length > 0 && width > 0 && height > 0) return Rectangle_area(length, width) * 2 + Rectangle_area(length, height) * 2 + Rectangle_area(width, height) * 2;
+	else return -1;
+}

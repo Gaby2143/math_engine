@@ -124,4 +124,14 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Circle_length(double r);
+	/// <summary>
+	/// Calculate the area of all faces of a cube with given side
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Cube_area(double side);
+	/// <summary>
+	/// Calculate the area of all faces of a cuboid with given length, width and height
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Cuboid_area(double length, double width, double height);
 };
