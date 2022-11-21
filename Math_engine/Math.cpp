@@ -149,3 +149,13 @@ double Math::Cuboid_area(double length, double width, double height)
 	if (length > 0 && width > 0 && height > 0) return Rectangle_area(length, width) * 2 + Rectangle_area(length, height) * 2 + Rectangle_area(width, height) * 2;
 	else return -1;
 }
+double Math::Cube_volume(double side)
+{
+	if (side > 0) return side * side * side;
+	else return -1;
+}
+double Math::Cuboid_volume(double length, double width, double height)
+{
+	if (length > 0 && width > 0 && height > 0) return length * width * height;
+	else return -1;
+}
