@@ -159,3 +159,13 @@ double Math::Cuboid_volume(double length, double width, double height)
 	if (length > 0 && width > 0 && height > 0) return length * width * height;
 	else return -1;
 }
+double Math::Cilinder_area(double radius, double height)
+{
+	if (radius > 0 && height > 0) return (2 * PI * radius * height) + (2 * PI * radius * radius);
+	else return -1;
+}
+double Math::Cilinder_volume(double radius, double height)
+{
+	if (radius > 0 && height > 0) return PI*radius*radius*height;
+	else return -1;
+}

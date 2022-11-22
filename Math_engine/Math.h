@@ -144,4 +144,14 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Cuboid_volume(double length, double width, double height);
+	/// <summary>
+	/// Calculate the area of a cilinder with given radius and height
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Cilinder_area(double radius, double height);
+	/// <summary>
+	/// Calculate the volume of a cilinder with given radius and height
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Cilinder_volume(double radius, double height);
 };
