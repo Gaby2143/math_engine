@@ -154,4 +154,14 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Cilinder_volume(double radius, double height);
+	/// <summary>
+	/// Calculate the area of a sphere with given radius
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Sphere_area(double radius);
+	/// <summary>
+	/// Calculate the volume of a sphere with given radius
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Sphere_volume(double radius);
 };

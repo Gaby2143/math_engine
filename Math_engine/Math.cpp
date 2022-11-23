@@ -169,3 +169,13 @@ double Math::Cilinder_volume(double radius, double height)
 	if (radius > 0 && height > 0) return PI*radius*radius*height;
 	else return -1;
 }
+double Math::Sphere_area(double radius)
+{
+	if (radius > 0) return 4 * PI * radius * radius;
+	else return -1;
+}
+double Math::Sphere_volume(double radius)
+{
+	if (radius > 0) return (4 / 3) * PI * radius * radius * radius;
+	else return - 1;
+}
