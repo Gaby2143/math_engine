@@ -164,4 +164,14 @@ class Math
 	/// Complexity: O(1)
 	/// </summary>
 	public: static double Sphere_volume(double radius);
+	/// <summary>
+	/// Calculate the area of a triangle with given sides
+	/// Complexity: O(1)
+	/// </summary>
+	public: static double Triangle_area(double a, double b, double c);
+	/// <summary>
+	/// Return true if a number is palindrome
+	/// Complexity: O(sqrt(n))
+	/// </summary>
+	public: static bool Is_palindrome(int number);
 };

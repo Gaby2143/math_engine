@@ -179,3 +179,20 @@ double Math::Sphere_volume(double radius)
 	if (radius > 0) return (4 / 3) * PI * radius * radius * radius;
 	else return - 1;
 }
+double Math::Triangle_area(double a, double b, double c)
+{
+	if (a > 0 && b > 0 && c > 0) return sqrt((Triangle_perimiter(a, b, c)) * ((Triangle_perimiter(a, b, c) / 2) - a) * ((Triangle_perimiter(a, b, c) / 2) - b) * ((Triangle_perimiter(a, b, c) / 2) - c));
+	else return -1;
+}
+bool Math::Is_palindrome(int number)
+{
+	int ogl = 0;
+	int aux_number = number;
+	while (number > 0)
+	{
+		ogl = ogl * 10 + number % 10;
+		number /= 10;
+	}
+	if (aux_number == ogl) return true;
+	else return false;
+}
