@@ -196,3 +196,11 @@ bool Math::Is_palindrome(int number)
 	if (aux_number == ogl) return true;
 	else return false;
 }
+Vector2 operator +(Vector2 vect1, Vector2 vect2)
+{
+	return Vector2(vect1.x + vect2.x, vect1.y + vect2.y);
+}
+Vector2 operator -(Vector2 vect1, Vector2 vect2)
+{
+	return Vector2(vect1.x - vect2.x, vect1.y - vect2.y);
+}
