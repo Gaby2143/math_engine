@@ -107,82 +107,82 @@ double Math::Delta(double a, double b, double c)
 double Math::Circle_area(double r)
 {
 	if (r > 0) return PI * (r * r);
-	else return -1;
+	return -1;
 }
 double Math::Rectangle_area(double length, double width)
 {
 	if(length > 0 && width > 0) return length * width;
-	else return -1;
+	return -1;
 }
 double Math::Square_area(double side)
 {
 	if(side > 0) return side * side;
-	else return -1;
+	return -1;
 }
 double Math::Square_perimiter(double side)
 {
 	if (side > 0) return side * 4;
-	else return -1;
+	return -1;
 }
 double Math::Triangle_perimiter(double a, double b, double c)
 {
 	if (a > 0 && b > 0 && c > 0) return a + b + c;
-	else return -1;
+	return -1;
 }
 double Math::Rectangle_perimiter(double length, double width)
 {
 	if (length > 0 && width > 0) return (2 * length) + (2 * width);
-	else return -1;
+	return -1;
 }
 double Math::Circle_length(double r)
 {
 	if (r > 0) return 2 * PI * r;
-	else return -1;
+	return -1;
 }
 double Math::Cube_area(double side)
 {
 	if (side > 0) return Square_area(side) * 6;
-	else return -1;
+	return -1;
 }
 double Math::Cuboid_area(double length, double width, double height)
 {
 	if (length > 0 && width > 0 && height > 0) return Rectangle_area(length, width) * 2 + Rectangle_area(length, height) * 2 + Rectangle_area(width, height) * 2;
-	else return -1;
+	return -1;
 }
 double Math::Cube_volume(double side)
 {
 	if (side > 0) return side * side * side;
-	else return -1;
+	return -1;
 }
 double Math::Cuboid_volume(double length, double width, double height)
 {
 	if (length > 0 && width > 0 && height > 0) return length * width * height;
-	else return -1;
+	return -1;
 }
 double Math::Cilinder_area(double radius, double height)
 {
 	if (radius > 0 && height > 0) return (2 * PI * radius * height) + (2 * PI * radius * radius);
-	else return -1;
+	return -1;
 }
 double Math::Cilinder_volume(double radius, double height)
 {
 	if (radius > 0 && height > 0) return PI*radius*radius*height;
-	else return -1;
+	return -1;
 }
 double Math::Sphere_area(double radius)
 {
 	if (radius > 0) return 4 * PI * radius * radius;
-	else return -1;
+	return -1;
 }
 double Math::Sphere_volume(double radius)
 {
 	if (radius > 0) return (4 / 3) * PI * radius * radius * radius;
-	else return - 1;
+	return - 1;
 }
 double Math::Triangle_area(double a, double b, double c)
 {
 	if (a > 0 && b > 0 && c > 0) return sqrt((Triangle_perimiter(a, b, c)) * ((Triangle_perimiter(a, b, c) / 2) - a) * ((Triangle_perimiter(a, b, c) / 2) - b) * ((Triangle_perimiter(a, b, c) / 2) - c));
-	else return -1;
+	return -1;
 }
 bool Math::Is_palindrome(int number)
 {
@@ -203,4 +203,9 @@ Vector2 operator +(Vector2 vect1, Vector2 vect2)
 Vector2 operator -(Vector2 vect1, Vector2 vect2)
 {
 	return Vector2(vect1.x - vect2.x, vect1.y - vect2.y);
+}
+bool operator ==(Vector2 vect1, Vector2 vect2)
+{
+	if (vect1.x == vect2.x && vect1.y == vect2.y) return true;
+	return false;
 }
