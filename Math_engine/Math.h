@@ -176,6 +176,11 @@ class Math
 	/// Complexity: O(sqrt(n))
 	/// </summary>
 	public: static bool Is_palindrome(int number);
+	/// <summary>
+	/// Return the reverse of a given number
+	/// Complexity: O(n)
+	/// </summary>
+	public: static int Reverse(int number);
 };
 
 Vector2 operator +(Vector2 vect1, Vector2 vect2);

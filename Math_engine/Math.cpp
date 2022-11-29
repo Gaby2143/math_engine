@@ -209,3 +209,27 @@ bool operator ==(Vector2 vect1, Vector2 vect2)
 	if (vect1.x == vect2.x && vect1.y == vect2.y) return true;
 	return false;
 }
+int Math::Reverse(int number)
+{
+	int rev = 0;
+	while (number > 0)
+	{
+		rev = rev * 10 + number % 10;
+		number /= 10;
+	}
+	return rev;
+}
+bool operator <(Vector2 vect1, Vector2 vect2)
+{
+	if (vect1.Module()<vect2.Module()) return true;
+	return false;
+}
+bool operator >(Vector2 vect1, Vector2 vect2)
+{
+	if (vect1.Module() > vect2.Module()) return true;
+	return false;
+}
+Vector3 operator +(Vector3 vect1, Vector2 vect2)
+{
+	return Vector3(vect1.x + vect2.x, vect1.y + vect2.y, vect1.z);
+}
