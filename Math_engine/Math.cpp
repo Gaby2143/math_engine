@@ -233,3 +233,11 @@ Vector3 operator +(Vector3 vect1, Vector2 vect2)
 {
 	return Vector3(vect1.x + vect2.x, vect1.y + vect2.y, vect1.z);
 }
+Vector3 operator -(Vector3 vect1, Vector2 vect2)
+{
+	return Vector3(vect1.x - vect2.x, vect1.y - vect2.y, vect1.z);
+}
+Vector3 operator +(Vector2 vect1, Vector3 vect2)
+{
+	return Vector3(vect1.x + vect2.x, vect1.y + vect2.y, vect2.z);
+}
