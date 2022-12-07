@@ -4,5 +4,5 @@
 
 int main()
 {
-    std::cout << Math::Gauss(2, 2, 10);
+    std::cout << Math::Angle(new Vector3(0, 1, 0), new Vector3(1, 0, 0));
 }

@@ -268,3 +268,11 @@ Vector3 operator -(Vector3 vect1, Vector3 vect2)
 {
 	return Vector3(vect1.x - vect2.x, vect1.y - vect2.y, vect1.z - vect2.z);
 }
+Vector3 Math::Cross(Vector3 vect1, Vector3 vect2)
+{
+	return Vector3((vect1.y * vect2.z) - (vect1.z * vect2.y), (vect2.x * vect1.z) - (vect2.z * vect1.x), (vect1.x * vect2.y) - (vect1.y * vect2.x));
+}
+double Math::Angle(Vector3 vect1, Vector3 vect2)
+{
+	return asin(Cross(vect1, vect2).Module() / (vect1.Module() * vect2.Module()));
+}
