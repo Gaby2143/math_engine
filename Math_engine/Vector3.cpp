@@ -19,3 +19,4 @@ double Vector3::Module()
 {
 	return sqrt(x * x + y * y+ z * z);
 }
+

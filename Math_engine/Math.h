@@ -181,8 +181,44 @@ class Math
 	/// Complexity: O(n)
 	/// </summary>
 	public: static int Reverse(int number);
-};
 
+
+	public:static double Angle(Vector3 vect1,Vector3 vect2);
+	public:static Vector3 Cross(Vector3 vect1, Vector3 vect2);
+	public:static double Distance(Vector3 vect1, Vector3 vect2);
+	public:static double Dot(Vector3 vect1, Vector3 vect2);
+	public:static Vector3 Lerp(Vector3 vect1, Vector3 vect2,double t);
+	public:static Vector3 Lerp_unclamped(Vector3 vect1, Vector3 vect2,double t);
+	public:static Vector3 Slerp(Vector3 vect1, Vector3 vect2, double t);
+	public:static Vector3 Slerp_unclamped(Vector3 vect1, Vector3 vect2, double t);
+	public:static Vector3 Max(Vector3 vect1, Vector3 vect2);
+	public:static Vector3 Min(Vector3 vect1, Vector3 vect2);
+	public:static Vector3 Move_towards(Vector3 current_pos, Vector3 target_pos,double max_distance);
+	public:static Vector3 Normalized(Vector3 vect1);
+	public:static Vector3 Ortho_normalized(Vector3 normal,Vector3 tangent);
+	public:static Vector3 Project(Vector3 vect1, Vector3 vect2);
+	public:static Vector3 Project_on_plane(Vector3 vect, Vector3 plan_normal);
+	public:static Vector3 Reflect(Vector3 vect, Vector3 plan_normal);
+	public:static Vector3 Rotate_towards(Vector3 current, Vector3 target_pos, double max_radians,double max_magnitude);
+	public:static Vector3 Scale(Vector3 vect1, Vector3 vect2);
+	public:static Vector3 Signed_angle(Vector3 from, Vector3 to,Vector3 axis);
+	public:static Vector3 Smooth_damp(Vector3 current, Vector3 targer, Vector3& curent_velocity, double smooth_time, double delta_time, double max_speed = _CRT_INT_MAX);
+
+	public:static double Angle(Vector2 vect1, Vector2 vect2);
+	public:static double Distance(Vector2 vect1, Vector2 vect2);
+	public:static double Dot(Vector2 vect1, Vector2 vect2);
+	public:static Vector2 Lerp(Vector2 vect1, Vector2 vect2, double t);
+	public:static Vector2 Lerp_unclamped(Vector2 vect1, Vector2 vect2, double t);
+	public:static Vector2 Max(Vector2 vect1, Vector2 vect2);
+	public:static Vector2 Min(Vector2 vect1, Vector2 vect2);
+	public:static Vector2 Move_towards(Vector2 current_pos, Vector2 target_pos, double max_distance);
+	public:static Vector2 Normalized(Vector2 vect1);
+	public:static Vector2 Perpendicular(Vector2 in_direction);
+	public:static Vector2 Reflect(Vector2 in_direction, Vector2 in_normal);
+	public:static Vector2 Scale(Vector2 vect1, Vector2 vect2);
+	public:static Vector2 Signed_angle(Vector2 from, Vector2 to, Vector2 axis);
+	public:static Vector2 Smooth_damp(Vector2 current, Vector2 targer, Vector2& curent_velocity, double smooth_time, double delta_time, double max_speed = _CRT_INT_MAX);
+};
 Vector2 operator +(Vector2 vect1, Vector2 vect2);
 Vector2 operator -(Vector2 vect1, Vector2 vect2);
 bool operator ==(Vector2 vect1, Vector2 vect2);
@@ -200,3 +236,4 @@ Vector3 operator -(Vector3 vect1, Vector2 vect2);
 
 Vector3 operator +(Vector2 vect1, Vector3 vect2);
 Vector3 operator -(Vector2 vect1, Vector3 vect2);
+
