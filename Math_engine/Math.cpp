@@ -250,3 +250,21 @@ bool operator ==(Vector3 vect1, Vector3 vect2)
 	if (vect1.Module() == vect2.Module()) return true;
 	return false;
 }
+bool operator <(Vector3 vect1, Vector3 vect2)
+{
+	if (vect1.Module() < vect2.Module()) return true;
+	return false;
+}
+bool operator >(Vector3 vect1, Vector3 vect2)
+{
+	if (vect1.Module() > vect2.Module()) return true;
+	return false;
+}
+Vector3 operator +(Vector3 vect1, Vector3 vect2)
+{
+	return Vector3(vect1.x + vect2.x, vect1.y + vect2.y, vect1.z + vect2.z);
+}
+Vector3 operator -(Vector3 vect1, Vector3 vect2)
+{
+	return Vector3(vect1.x - vect2.x, vect1.y - vect2.y, vect1.z - vect2.z);
+}
