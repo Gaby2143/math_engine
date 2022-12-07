@@ -180,8 +180,8 @@ class Math
 	/// Return the reverse of a given number
 	/// Complexity: O(n)
 	/// </summary>
-	public: static int Reverse(int number);
-
+	public:static int Reverse(int number);
+	public:static double From_radians_to_degrees(double radians);
 
 	public:static double Angle(Vector3 vect1,Vector3 vect2);
 	public:static Vector3 Cross(Vector3 vect1, Vector3 vect2);

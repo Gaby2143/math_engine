@@ -4,5 +4,5 @@
 
 int main()
 {
-    std::cout << Math::Angle(new Vector3(0, 1, 0), new Vector3(1, 0, 0));
+    std::cout <<Math::From_radians_to_degrees(Math::Angle(Vector3(0,1,0),Vector3(1,0,0)));
 }
