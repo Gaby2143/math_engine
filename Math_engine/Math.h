@@ -182,7 +182,12 @@ class Math
 	/// </summary>
 	public:static int Reverse(int number);
 	public:static double From_radians_to_degrees(double radians);
-
+	/// <summary>
+	/// Calculate the angle betwen 2 vectors
+	/// </summary>
+	/// <param name="vect1"></param>
+	/// <param name="vect2"></param>
+	/// <returns>Returns the angle in RADIANS</returns>
 	public:static double Angle(Vector3 vect1,Vector3 vect2);
 	public:static Vector3 Cross(Vector3 vect1, Vector3 vect2);
 	public:static double Distance(Vector3 vect1, Vector3 vect2);

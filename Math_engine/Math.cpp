@@ -279,13 +279,16 @@ Vector3 Math::Cross(Vector3 vect1, Vector3 vect2)
 	return Vector3((vect1.y * vect2.z) - (vect1.z * vect2.y), (vect2.x * vect1.z) - (vect2.z * vect1.x), (vect1.x * vect2.y) - (vect1.y * vect2.x));
 }
 
-/// <summary>
-/// Calculate the angle betwen 2 vectors
-/// </summary>
-/// <param name="vect1"></param>
-/// <param name="vect2"></param>
-/// <returns>Return the angle in RADIANS</returns>
+
 double Math::Angle(Vector3 vect1, Vector3 vect2)
 {
 	return asin(Cross(vect1, vect2).Module() / (vect1.Module() * vect2.Module()));
+}
+double Math::Distance(Vector3 vect1, Vector3 vect2)
+{
+	return sqrt(((vect1.x - vect2.x) * (vect1.x - vect2.x)) + (vect1.y - vect2.y)*(vect1.y - vect2.y) + (vect1.z - vect2.z)*(vect1.z - vect2.z));
+}
+double Math::Distance(Vector2 vect1, Vector2 vect2)
+{
+	return sqrt(((vect1.x - vect2.x) * (vect1.x - vect2.x)) + ((vect1.y - vect2.y) * (vect1.y - vect2.y)));
 }
