@@ -292,3 +292,53 @@ double Math::Distance(Vector2 vect1, Vector2 vect2)
 {
 	return sqrt(((vect1.x - vect2.x) * (vect1.x - vect2.x)) + ((vect1.y - vect2.y) * (vect1.y - vect2.y)));
 }
+Vector3 Max(Vector3 vect1, Vector3 vect2)
+{
+	Vector3 max;
+	if (vect1.x >= vect2.x)
+	{
+		max.x = vect1.x;
+	}
+	else
+	{
+		max.x = vect2.x;
+	}
+	if (vect1.y >= vect2.y)
+	{
+		max.y = vect1.y;
+	}
+	else
+	{
+		max.y = vect2.y;
+	}
+	if (vect1.z >= vect2.z)
+	{
+		max.z = vect1.z;
+	}
+	else
+	{
+		max.z = vect2.z;
+	}
+	return max;
+}
+Vector2 Max(Vector2 vect1, Vector2 vect2)
+{
+	Vector2 max;
+	if (vect1.x >= vect2.x)
+	{
+		max.x = vect1.x;
+	}
+	else
+	{
+		max.x = vect2.x;
+	}
+	if (vect1.y >= vect2.y)
+	{
+		max.y = vect1.y;
+	}
+	else
+	{
+		max.y = vect2.y;
+	}
+	return max;
+}
