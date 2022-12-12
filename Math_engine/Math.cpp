@@ -342,3 +342,53 @@ Vector2 Max(Vector2 vect1, Vector2 vect2)
 	}
 	return max;
 }
+Vector3 Min(Vector3 vect1, Vector3 vect2)
+{
+	Vector3 min;
+	if (vect1.x <= vect2.x)
+	{
+		min.x = vect1.x;
+	}
+	else
+	{
+		min.x = vect2.x;
+	}
+	if (vect1.y <= vect2.y)
+	{
+		min.y = vect1.y;
+	}
+	else
+	{
+		min.y = vect2.y;
+	}
+	if (vect1.z <= vect2.z)
+	{
+		min.z = vect1.z;
+	}
+	else
+	{
+		min.z = vect2.z;
+	}
+	return min;
+}
+Vector2 Min(Vector2 vect1, Vector2 vect2)
+{
+	Vector2 min;
+	if (vect1.x <= vect2.x)
+	{
+		min.x = vect1.x;
+	}
+	else
+	{
+		min.x = vect2.x;
+	}
+	if (vect1.y <= vect2.y)
+	{
+		min.y = vect1.y;
+	}
+	else
+	{
+		min.y = vect2.y;
+	}
+	return min;
+}
