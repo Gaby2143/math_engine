@@ -392,3 +392,11 @@ Vector2 Min(Vector2 vect1, Vector2 vect2)
 	}
 	return min;
 }
+double Dot(Vector3 vect1, Vector3 vect2)
+{
+	return ((vect1.x * vect2.x) + (vect1.y * vect2.y) + (vect1.z * vect2.z));
+}
+double Dot(Vector2 vect1, Vector2 vect2)
+{
+	return ((vect1.x * vect2.x) + (vect1.y * vect2.y));
+}
