@@ -218,6 +218,10 @@ class Math
 	public:static Vector2 Min(Vector2 vect1, Vector2 vect2);
 	public:static Vector2 Move_towards(Vector2 current_pos, Vector2 target_pos, double max_distance);
 	public:static Vector2 Normalized(Vector2 vect1);
+	/// <summary>
+	/// De verificat existenta
+	/// </summary>
+	public:static Vector2 Project(Vector2 vect1, Vector2 vect2);
 	public:static Vector2 Perpendicular(Vector2 in_direction);
 	public:static Vector2 Reflect(Vector2 in_direction, Vector2 in_normal);
 	public:static Vector2 Scale(Vector2 vect1, Vector2 vect2);
