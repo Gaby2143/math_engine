@@ -251,6 +251,14 @@ Vector3 operator -(Vector2 vect1, Vector3 vect2)
 {
 	return Vector3(vect1.x - vect2.x, vect1.y - vect2.y, vect2.z);
 }
+Vector3 operator *(Vector3 vect1, double scalar)
+{
+	return Vector3(vect1.x * scalar, vect1.y * scalar, vect1.z * scalar);
+}
+Vector2 operator *(Vector2 vect1, double scalar)
+{
+	return Vector2(vect1.x * scalar, vect1.y * scalar);
+}
 bool operator ==(Vector3 vect1, Vector3 vect2)
 {
 	if (vect1.Module() == vect2.Module()) return true;
@@ -292,7 +300,7 @@ double Math::Distance(Vector2 vect1, Vector2 vect2)
 {
 	return sqrt(((vect1.x - vect2.x) * (vect1.x - vect2.x)) + ((vect1.y - vect2.y) * (vect1.y - vect2.y)));
 }
-Vector3 Max(Vector3 vect1, Vector3 vect2)
+Vector3 Math::Max(Vector3 vect1, Vector3 vect2)
 {
 	Vector3 max;
 	if (vect1.x >= vect2.x)
@@ -321,7 +329,7 @@ Vector3 Max(Vector3 vect1, Vector3 vect2)
 	}
 	return max;
 }
-Vector2 Max(Vector2 vect1, Vector2 vect2)
+Vector2 Math::Max(Vector2 vect1, Vector2 vect2)
 {
 	Vector2 max;
 	if (vect1.x >= vect2.x)
@@ -342,7 +350,7 @@ Vector2 Max(Vector2 vect1, Vector2 vect2)
 	}
 	return max;
 }
-Vector3 Min(Vector3 vect1, Vector3 vect2)
+Vector3 Math::Min(Vector3 vect1, Vector3 vect2)
 {
 	Vector3 min;
 	if (vect1.x <= vect2.x)
@@ -371,7 +379,7 @@ Vector3 Min(Vector3 vect1, Vector3 vect2)
 	}
 	return min;
 }
-Vector2 Min(Vector2 vect1, Vector2 vect2)
+Vector2 Math::Min(Vector2 vect1, Vector2 vect2)
 {
 	Vector2 min;
 	if (vect1.x <= vect2.x)
@@ -392,11 +400,19 @@ Vector2 Min(Vector2 vect1, Vector2 vect2)
 	}
 	return min;
 }
-double Dot(Vector3 vect1, Vector3 vect2)
+double Math::Dot(Vector3 vect1, Vector3 vect2)
 {
 	return ((vect1.x * vect2.x) + (vect1.y * vect2.y) + (vect1.z * vect2.z));
 }
-double Dot(Vector2 vect1, Vector2 vect2)
+double Math::Dot(Vector2 vect1, Vector2 vect2)
 {
 	return ((vect1.x * vect2.x) + (vect1.y * vect2.y));
+}  
+Vector3 Math::Project(Vector3 vect1, Vector3 vect2)
+{
+	return vect1 * (Dot(vect1, vect2) / vect1.Module() * vect1.Module());
+}
+Vector2 Math::Project(Vector2 vect1, Vector2 vect2)
+{
+	return vect1*(Dot(vect1, vect2) / vect1.Module()*vect1.Module());
 }

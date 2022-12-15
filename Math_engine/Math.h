@@ -226,12 +226,14 @@ class Math
 };
 Vector2 operator +(Vector2 vect1, Vector2 vect2);
 Vector2 operator -(Vector2 vect1, Vector2 vect2);
+Vector2 operator *(Vector2 vect1, double scalar);
 bool operator ==(Vector2 vect1, Vector2 vect2);
 bool operator <(Vector2 vect1, Vector2 vect2);
 bool operator >(Vector2 vect1, Vector2 vect2);
 
 Vector3 operator +(Vector3 vect1, Vector3 vect2);
 Vector3 operator -(Vector3 vect1, Vector3 vect2);
+Vector3 operator *(Vector3 vect1, double scalar);
 bool operator ==(Vector3 vect1, Vector3 vect2);
 bool operator <(Vector3 vect1, Vector3 vect2);
 bool operator >(Vector3 vect1, Vector3 vect2);
