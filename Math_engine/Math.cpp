@@ -416,3 +416,11 @@ Vector2 Math::Project(Vector2 vect1, Vector2 vect2)
 {
 	return vect1*(Dot(vect1, vect2) / vect1.Module()*vect1.Module());
 }
+Vector2 Lerp(Vector2 vect1, Vector2 vect2, double t)
+{
+	if (t > 1) return vect2;
+}
+Vector2 Lerp_unclamped(Vector2 vect1, Vector2 vect2, double t)
+{
+	return vect2;
+}
