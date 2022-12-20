@@ -434,3 +434,14 @@ Vector2 Math::Lerp_unclamped(Vector2 vect1, Vector2 vect2, double t)
 {
 	return vect1 + (vect2 - vect1) * t;
 }
+Vector3 Math::Slerp(Vector3 vect1, Vector3 vect2, double t)
+{
+	double angle = acos(Dot(vect1, vect2));
+	if (t > 1) return vect2;
+	return vect1 * ((sin(1 - t) * angle) / sin(angle)) + vect2 * (sin(t * angle) / sin(angle));
+}
+Vector3 Math::Slerp_unclamped(Vector3 vect1, Vector3 vect2, double t)
+{
+	double angle = acos(Dot(vect1, vect2));
+	return vect1 * ((sin(1 - t) * angle) / sin(angle)) + vect2 * (sin(t * angle) / sin(angle));
+}
