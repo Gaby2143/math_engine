@@ -445,3 +445,11 @@ Vector3 Math::Slerp_unclamped(Vector3 vect1, Vector3 vect2, double t)
 	double angle = acos(Dot(vect1, vect2));
 	return vect1 * ((sin(1 - t) * angle) / sin(angle)) + vect2 * (sin(t * angle) / sin(angle));
 }
+Vector3 Math::Normalized(Vector3 vect1)
+{
+	return Vector3(vect1.x / vect1.Module(), vect1.y / vect1.Module(), vect1.z / vect1.Module());
+}
+Vector2 Math::Normalized(Vector2 vect1)
+{
+	return Vector2(vect1.x / vect1.Module(), vect1.y / vect1.Module());
+}
