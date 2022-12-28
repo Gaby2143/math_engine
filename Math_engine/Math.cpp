@@ -453,3 +453,11 @@ Vector2 Math::Normalized(Vector2 vect1)
 {
 	return Vector2(vect1.x / vect1.Module(), vect1.y / vect1.Module());
 }
+Vector3 Math::Reflect(Vector3 vect, Vector3 plan_normal)
+{
+	return Vector3(vect-plan_normal*2*(Dot(vect, plan_normal)));
+}
+Vector2 Math::Reflect(Vector2 in_direction, Vector2 in_normal)
+{
+	return Vector2(in_direction - in_normal * 2 * (Dot(in_direction, in_normal)));
+}
