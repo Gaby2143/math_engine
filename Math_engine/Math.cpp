@@ -461,3 +461,15 @@ Vector2 Math::Reflect(Vector2 in_direction, Vector2 in_normal)
 {
 	return Vector2(in_direction - in_normal * 2 * (Dot(in_direction, in_normal)));
 }
+Vector3 Math::Project_on_plane(Vector3 vect, Vector3 plan_normal)
+{
+	return Vector3(vect - plan_normal * (Dot(vect, plan_normal)));
+}
+Vector3 Math::Scale(Vector3 vect1, Vector3 vect2)
+{
+	return vect2*(Dot(vect1, vect2)/Dot(vect2,vect2));
+}
+Vector2 Math::Scale(Vector2 vect1, Vector2 vect2)
+{
+	return vect2 * (Dot(vect1, vect2) / Dot(vect2, vect2));
+}
