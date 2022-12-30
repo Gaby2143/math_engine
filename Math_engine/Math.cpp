@@ -196,6 +196,16 @@ bool Math::Is_palindrome(int number)
 	if (aux_number == ogl) return true;
 	else return false;
 }
+double Math::Min(double a, double b)
+{
+	if (a < b) return a;
+	return b;
+}
+double Math::Max(double a, double b)
+{
+	if (a > b) return a;
+	return b;
+}
 Vector2 operator +(Vector2 vect1, Vector2 vect2)
 {
 	return Vector2(vect1.x + vect2.x, vect1.y + vect2.y);
@@ -472,4 +482,22 @@ Vector3 Math::Scale(Vector3 vect1, Vector3 vect2)
 Vector2 Math::Scale(Vector2 vect1, Vector2 vect2)
 {
 	return vect2 * (Dot(vect1, vect2) / Dot(vect2, vect2));
+}
+Vector3 Math::Move_towards(Vector3 current_pos, Vector3 target_pos, double max_distance)
+{
+	double distance_to_target = Distance(current_pos, target_pos);
+	if (distance_to_target <= max_distance) return current_pos;
+	Vector3 direction = (target_pos - current_pos) * (1.0 / distance_to_target);
+	if(max_distance<distance_to_target) return current_pos + direction * Min(max_distance, distance_to_target);
+}
+Vector2 Math::Move_towards(Vector2 current_pos, Vector2 target_pos, double max_distance)
+{
+	double distance_to_target = Distance(current_pos, target_pos);
+	if (distance_to_target <= max_distance) return current_pos;
+	Vector2 direction = (target_pos - current_pos) * (1.0 / distance_to_target);
+	if (max_distance < distance_to_target) return current_pos + direction * Min(max_distance, distance_to_target);
+}
+Vector2 Math::Perpendicular(Vector2 in_direction)
+{
+	return Vector2(-in_direction.y, in_direction.x);
 }
