@@ -182,8 +182,8 @@ class Math
 	/// </summary>
 	public:static int Reverse(int number);
 	public:static double From_radians_to_degrees(double radians);
-	public:static double min(double a, double b);
-	public:static double max(double a, double b);
+	public:static double Min(double a, double b);
+	public:static double Max(double a, double b);
 	/// <summary>
 	/// Calculate the angle betwen 2 vectors
 	/// </summary>
